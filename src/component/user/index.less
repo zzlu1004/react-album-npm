@@ -1,0 +1,159 @@
+.user{
+    height: 500px;
+    .left{
+        width: 170px;
+        border-right: 1px solid #e1e1e1;
+        overflow: hidden;
+        .upload-wrapper{
+            display: block;
+            width: 100%;
+            .ant-upload.ant-upload-select{
+                width: 100%;
+            }
+            .add-wrapper{
+                height: 50px;
+                background: #51c75b;
+                color: #fff;
+                cursor: pointer;
+                .icon{
+                    margin-right: 5px;
+                    font-size: 16px;
+                }
+            }
+        }
+        
+        .tree{
+            height: 100%;
+            overflow: auto;
+            .ant-tree li ul{
+                padding: 8px;
+            }
+            .ant-tree li .ant-tree-node-content-wrapper{
+                padding: 0;
+                width: 120px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+    }
+    .right{
+        flex: 1;
+        .group-wrapper{
+            height: 50px;
+            padding: 0 20px;
+            border-bottom: 1px solid #e1e1e1;
+            .add-group{
+                margin-right: 20px;
+            }
+            .edit-group{
+                margin-right: 20px;
+            }
+        }
+        .right-content{
+            .list-wrapper{
+                flex: 1;
+                height: 400px;
+                .content-list{
+                    flex: 1;
+                    height: 100%;
+                    overflow: auto;
+                    .img-item-wrapper{
+                        width: 20%;
+                        padding: 5px;
+                        height: 140px;
+                        .img-item{
+                            height: 100%;
+                            position: relative;
+                            border: 3px solid transparent;
+                            cursor: pointer;
+                            .img{
+                                width: 100%;
+                                max-height: 100%;
+                            }
+                            .img-title{
+                                position: absolute;
+                                z-index: 1;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                height: 26px;
+                                line-height: 26px;
+                                padding: 0 10px;
+                                text-align: center;
+                                background-color: rgba(0,0,0,.25);
+                                color: #fff;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            .del-wrapper{
+                                position: absolute;
+                                z-index: 2;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                background-color: rgba(0,0,0,.2);
+                                color: #fff;
+                            }
+                            .choose-wrapper{
+                                position: absolute;
+                                z-index: 3;
+                                top: 0;
+                                right: 0;
+                                background: #51c75b;
+                                color: #fff;
+                                padding:3px;
+                            }
+                            &.active{
+                                border: 3px solid #51c75b; 
+                            }
+                            &:hover{
+                                border: 3px solid #51c75b;
+                            }
+                        }
+                    }
+                    .no-img{
+                        margin: 30px auto;
+                        color: #999;
+                    }
+                }
+                .pagination{
+                    flex: 1;
+                    height: 50px;
+                    border-top: 1px solid #e1e1e1;
+                    .pagination-left{
+                        padding-left: 10px;
+                        .del-not{
+                            color: #999;
+                            cursor: not-allowed;
+                        }
+                        .del-active{
+                            color: #51c75b;
+                            cursor: pointer;
+                        }
+                        .choose-num{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+            .detail-wrapper{
+                width: 280px;
+                height: 400px;
+                .content-detail{
+                    height: 100%;
+                    overflow: auto;
+                    border-left: 1px solid #e1e1e1;
+                }
+                .operation{
+                    width:280px;
+                    height: 50px;
+                    border-left: 1px solid #e1e1e1;
+                    border-top: 1px solid #e1e1e1;
+                }
+            }
+        }
+    }
+}
